@@ -1,5 +1,6 @@
 #Encapsulation
 #Private
+#instance variable
 
 class Employee:
      
@@ -20,7 +21,7 @@ class Employee:
          print("Salary={}".format(self.__salary))      #เรียกใช้งาน Method 
          print("Department={}".format(self.__department))
          
-    #setter method
+    #setter method          #ทำการแก้ไขข้อมูล โดยระบุรูปแบบการกระทำผ่านตัว Method 
     def setName(self,newname):     #newnameชื่อใหม่
          self.__name=newname    
     def setSalary(self,newsalary):
@@ -28,27 +29,34 @@ class Employee:
     def setDepartment(self,newdepartment):
          self.__department=newdepartment
          
+     #getter Method ดึงค่าไปใช้งาน
+     
+    def getName(self):
+          return self.__name
+    def getSalary(self):
+          return self.__salary
+    def getDepartment(self):
+          return self.__department
+     
+
+         
          
 #การเรียกใช้งานclass โดยการสร้างObject
 obj1=Employee("A",50000,"วิศวกร")
 #obj1.__salary=27000 #แก้ไม่ได้ เพราะ private นอกจากจะใช้ setter method
 obj1.setSalary(27000)
 obj1.setName("AAA")
-obj1._showdata()
+print("ชื่อ= ",format(obj1.getName()))
+print("ตำแหน่ง = ",format(obj1.getDepartment()))   
+print("เงินเดือน= ",format(obj1.getSalary()))     
 
 
 
-
-
+# obj1._showdata()
 # print(obj1._name) 
-
-
 # obj2=Employee("B",40000,"ผู้จัดการ")
 # obj3=Employee("C",35000,"ครู")
-
-
 # print(isinstance(obj1,Employee)) #ตรวจสอบว่า obj1 ถูกสร้างจากคลาส Employee รึเปล่า
 # print(isinstance(obj1,int)) #ตรวจสอบว่า obj1 ถูกสร้างจากคลาส int รึเปล่า
-
 # print(dir(obj1)) #dir มี Method, Attributeอะไรบ้างให้ใช้งาน
 # print(obj1.__class__) # Object ถูกสร้างมาจาก Class อะไร
