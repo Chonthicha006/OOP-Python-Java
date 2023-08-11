@@ -17,9 +17,11 @@ class Employee:
    
     #ถ้าเป็น Private จะมี_ _ 2 ตัว
     def _showdata(self): #กำหนดรายละเอียดผ่าน Method => detail โดยสร้าง Method ขึ้นมาใหม่
-         print("Name={}".format(self.__name)) #print name,salary ที่กำหนดเข้าไปใน object แต่ละตัวออกมาอีกที
-         print("Salary={}".format(self.__salary))      #เรียกใช้งาน Method 
-         print("Department={}".format(self.__department))
+         print("Name= "+self.__name) #print name,salary ที่กำหนดเข้าไปใน object แต่ละตัวออกมาอีกที
+         print("Salary= "+str(self.__salary))    
+        #  print("Salary={}".format(self.__salary))         
+        #  print("Salary= ",format(self.__salary))      
+         print("Department= "+self.__department)
          
     #setter method          #ทำการแก้ไขข้อมูล โดยระบุรูปแบบการกระทำผ่านตัว Method 
     def setName(self,newname):     #newnameชื่อใหม่
