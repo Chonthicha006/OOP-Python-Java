@@ -1,3 +1,8 @@
+/**
+* Basic demonstration of how to work with bicycle objects
+* @author https://docs.oracle.com/javase/tutorial/java/concepts/class.html
+*
+*/
 public class BicycleDemo {
 public static void main(String[] args) {
 // Create two different Bicycle objects
